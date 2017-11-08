@@ -7,3 +7,4 @@ YouTube API Key that I created for this project is = AIzaSyCqCuFDGmpWKfl-9sE9wbZ
 It **does not** feature user authorization at this point, so the user won't be able to log into _thier_ YouTube account.
 
 Connect with me on Twitter [@PeteCapeCod](https://twitter.com/PeteCapeCod)
+Connect with Tim on Twitter [@timh1203](https://twitter.com/traveldev)
