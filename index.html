@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Youtube Streamer</title>
+    <title>Simplified Youtube</title>
     <!-- Local Files -->
     <link rel="stylesheet" href="style.css">
+    <!-- Materialize -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div id="main">
-        <section id="header">
-            <h1>The Youtube Streamer</h1>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><i class="material-icons">ondemand_video</i>Simplified Youtube</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="#">Videos</a></li>
+                <li><a href="#">Channels</a></li>
+                <li><a href="#">Playlists</a></li>
+                </ul>
+            </div>
+        </nav>
+                        
+        <section id="header" class="col s12 center-align">
             <p>header</p>
         </section><!--end #header-->
         
-        <section id="channels">
+        <section id="channels" class="col s12 center-align">
             <p>channels</p>
         </section><!--end #channels-->
         
-        <section id="footer">
+        <section id="footer" class="col s12 center-align">
             <p>footer</p>
         </section><!--end #footer-->
         
     </div><!--end #main-->
     
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body><!--end body-->
 </html><!--end html-->
