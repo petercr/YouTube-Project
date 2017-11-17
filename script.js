@@ -1,4 +1,49 @@
 (function() {
+
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+          tag.id = "existing-iframe";
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('existing-iframe-example', {
+                events: {
+                  'onReady': onPlayerReady,
+                  'onStateChange': onPlayerStateChange
+                }
+            });
+          }
+          function onPlayerReady(event) {
+            document.getElementById('existing-iframe-example').style.borderColor = '#FF6D00';
+          }
+          function changeBorderColor(playerStatus) {
+            var color;
+            if (playerStatus == -1) {
+              color = "#37474F"; // unstarted = gray
+            } else if (playerStatus == 0) {
+              color = "#FFFF00"; // ended = yellow
+            } else if (playerStatus == 1) {
+              color = "#33691E"; // playing = green
+            } else if (playerStatus == 2) {
+              color = "#DD2C00"; // paused = red
+            } else if (playerStatus == 3) {
+              color = "#AA00FF"; // buffering = purple
+            } else if (playerStatus == 5) {
+              color = "#FF6DOO"; // video cued = orange
+            }
+            if (color) {
+              document.getElementById('existing-iframe-example').style.borderColor = color;
+            }
+          }
+          function onPlayerStateChange(event) {
+            changeBorderColor(event.data);
+          }
+        
+
+    
+    var channelID;
     const baseURL = 'https://www.googleapis.com/youtube/v3';
     const apiKey = 'AIzaSyCqCuFDGmpWKfl-9sE9wbZFnpCn-jh8Mlc';
     const fccChannel = 'UC8butISFwT-Wl7EV0hUK0BQ';
@@ -10,6 +55,7 @@
     // const searchChannel = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=free+code+camp&type=video&videoCaption=closedCaption&key=AIzaSyCqCuFDGmpWKfl-9sE9wbZFnpCn-jh8Mlc&maxResults=50";
 
     function addChannels(data) {
+        channelID = data.items[0].snippet.channelId;
         const thumbnail = data.items[0].snippet.thumbnails.high.url;
         const videoTitle = data.items[0].snippet.title;
         const channelTitle = data.items[0].snippet.channelTitle;
@@ -21,7 +67,7 @@
         console.log(data);
         content += `
             <div id="${videoID}">
-            <a href="${watchURL + videoID}" target="_blank"><img src="${thumbnail}" /></a>
+            
             <p>${videoTitle}</p>
             <p>${channelTitle}</p>
             <p>${videoDesc}</p>
@@ -29,7 +75,8 @@
             <p>URL: ${watchURL + videoID}</p>
             </div>
         `;
-
+        // the line below was line 24 now replaced with an <iframe>
+        // <a href="${watchURL + videoID}" target="_blank"><img src="${thumbnail}" /></a>
         channels.innerHTML = content;
     }   
 
@@ -41,4 +88,6 @@
     };
     
     getData();
+
+
 })();
