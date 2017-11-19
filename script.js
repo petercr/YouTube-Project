@@ -1,6 +1,6 @@
 (function() {
 
-    // 2. This code loads the IFrame Player API code asynchronously.
+    // This code loads the IFrame Player API code asynchronously.
     var tag = document.createElement('script');
           tag.id = "existing-iframe";
           tag.src = "https://www.youtube.com/iframe_api";
@@ -8,7 +8,7 @@
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
           var player;
           function onYouTubeIframeAPIReady() {
-            player = new YT.Player('existing-iframe-example', {
+            player = new YT.Player('existing-iframe', {
                 events: {
                   'onReady': onPlayerReady,
                   'onStateChange': onPlayerStateChange
@@ -16,7 +16,7 @@
             });
           }
           function onPlayerReady(event) {
-            document.getElementById('existing-iframe-example').style.borderColor = '#FF6D00';
+            document.getElementById('existing-iframe').style.borderColor = '#FF6D00';
           }
           function changeBorderColor(playerStatus) {
             var color;
@@ -34,7 +34,7 @@
               color = "#FF6DOO"; // video cued = orange
             }
             if (color) {
-              document.getElementById('existing-iframe-example').style.borderColor = color;
+              document.getElementById('existing-iframe').style.borderColor = color;
             }
           }
           function onPlayerStateChange(event) {
