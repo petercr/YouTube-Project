@@ -56,6 +56,8 @@
 
     function addChannels(data) {
         channelID = data.items[0].snippet.channelId;
+        console.log(channelID);
+        document.getElementById("existing-iframe").setAttribute("src" , "https://www.youtube.com/embed/" + channelID + "?enablejsapi=1");
         const thumbnail = data.items[0].snippet.thumbnails.high.url;
         const videoTitle = data.items[0].snippet.title;
         const channelTitle = data.items[0].snippet.channelTitle;
