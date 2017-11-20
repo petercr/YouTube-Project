@@ -55,9 +55,9 @@
     // const searchChannel = "https://www.googleapis.com/youtube/v3/search?part=snippet&q=free+code+camp&type=video&videoCaption=closedCaption&key=AIzaSyCqCuFDGmpWKfl-9sE9wbZFnpCn-jh8Mlc&maxResults=50";
 
     function addChannels(data) {
-        channelID = data.items[0].snippet.channelId;
-        console.log(channelID);
-        document.getElementById("existing-iframe").setAttribute("src" , "https://www.youtube.com/embed/" + channelID + "?enablejsapi=1");
+        
+        
+        
         const thumbnail = data.items[0].snippet.thumbnails.high.url;
         const videoTitle = data.items[0].snippet.title;
         const channelTitle = data.items[0].snippet.channelTitle;
@@ -67,6 +67,7 @@
         const watchURL = 'https://www.youtube.com/watch?v=';
         let content = '';
         console.log(data);
+        document.getElementById("existing-iframe").setAttribute("src" , "https://www.youtube.com/embed/" + videoID);
         content += `
             <div id="${videoID}">
             
