@@ -26,8 +26,10 @@
             <p>header</p>
         </section><!--end #header-->
 
+        <div id="player"></div>
+
         <section id="channels" class="col s12 center-align">
-            <div id="player"></div>
+            
             <p>channels</p>
         </section><!--end #channels-->
 
@@ -39,7 +41,7 @@
     <script>
         // 2. This code loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
-
+        
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
