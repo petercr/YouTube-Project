@@ -5,6 +5,11 @@ body {
   padding: 0;
 }
 
+iframe {
+     margin-left: 25%;
+     
+}
+
 /* Nav */
 .nav-wrapper {
   background-color: #FF0000;
