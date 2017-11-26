@@ -29,8 +29,8 @@
 		const watchURL = "https://www.youtube.com/watch?v=";
 		let content = "";
 		console.log(data);
-		let existingIframe = document.getElementById("player");
-		// existingIframe.loadVideoById(videoID);
+		player.loadVideoById(videoID);
+		console.log(videoID);
 		content += `
             <div id="${videoID}">
             <p>${videoTitle}</p>
