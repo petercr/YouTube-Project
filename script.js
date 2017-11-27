@@ -1,3 +1,5 @@
+var videoID;
+
 (function() {
 
 // ESLint file is included in GitHub project. To run ESlint run $npm install -g ESlint
@@ -5,7 +7,7 @@
 
 
 
-	let videoID;
+	
 	const baseURL = "https://www.googleapis.com/youtube/v3";
 	const apiKey = "AIzaSyCqCuFDGmpWKfl-9sE9wbZFnpCn-jh8Mlc";
 	const fccChannel = "UC8butISFwT-Wl7EV0hUK0BQ";
