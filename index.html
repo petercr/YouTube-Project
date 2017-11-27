@@ -38,6 +38,9 @@
         </section><!--end #footer-->
 
     </div><!--end #main-->
+
+    <script type="text/javascript" src="script.js"></script>
+
     <script>
         // 2. This code loads the IFrame Player API code asynchronously.
         var tag = document.createElement('script');
@@ -53,7 +56,7 @@
           player = new YT.Player('player', {
             height: '390',
             width: '640',
-            videoId: "-KPg3JHibbA",
+            videoId: videoID,
             events: {
               'onReady': onPlayerReady,
               'onStateChange': onPlayerStateChange
@@ -82,7 +85,7 @@
       </script>
 
 
-    <script type="text/javascript" src="script.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body><!--end body-->
 </html><!--end html-->
