@@ -7,7 +7,7 @@ var videoID;
 
 
 
-	
+
 	const baseURL = "https://www.googleapis.com/youtube/v3";
 	const apiKey = "AIzaSyCqCuFDGmpWKfl-9sE9wbZFnpCn-jh8Mlc";
 	const fccChannel = "UC8butISFwT-Wl7EV0hUK0BQ";
@@ -52,7 +52,7 @@ var videoID;
 			.then(resp => resp.json())
 			.then(addChannels)
 			.catch(err => console.log("There was an error: ", err));
-	};
+	}
 
 	getData();
 
