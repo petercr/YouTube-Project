@@ -4,7 +4,7 @@
 - This project was inspired by a Tweet from [@freecodecamp](https://twitter.com/freeCodeCamp) where in response to my Tweet saying I wasn't a huge fan of their [Twtich.tv](https://go.twitch.tv/) front-end project. And that a [YouTube](https://www.youtube.com) one would be even better!! :astonished: :sparkles:
 - It **does not** feature user authorization at this point, so the user won't be able to log into _thier_ YouTube account.
 - YouTube API Key that I created for this project is = 
-```js 
+```
 AIzaSyCqCuFDGmpWKfl-9sE9wbZFnpCn-jh8Mlc
 ```
 
